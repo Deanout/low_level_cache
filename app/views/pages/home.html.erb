@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h1>Pages#home</h1>
+  <div class="row">
+    <% @top_3_articles.each do |article| %>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title"><%= article.title %></h5>
+            <p class="card-text"><strong>ID: <%= article.id %></strong> | 
+              <em>Views: <%= article.views %></em>
+            </p>
+          </div>
+          <div class="card-footer">
+            <%= link_to 'Read More', article_path(article), class: 'btn btn-primary' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <p>Here's where the rest of my homepage would go.</p>
+</div>
